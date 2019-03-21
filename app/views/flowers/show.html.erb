@@ -1,0 +1,10 @@
+<h1>Name: <%= @flower.name %></h1>
+<h2>Pollen Cap: <%= @flower.pollen_capacity %></h2>
+
+<h3>All Bee Visits:</h3>
+
+<ul>
+<% @flower.flights.each do |fly| %>
+  <li><%= fly.bee.name %></li>
+<% end %>
+</ul>

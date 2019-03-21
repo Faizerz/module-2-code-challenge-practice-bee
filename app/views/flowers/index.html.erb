@@ -1,0 +1,5 @@
+<h1>All da Flowerz</h1>
+<h2><%= link_to 'Create New', new_flower_path %></h2>
+<% @flowers.each do |fw| %>
+  <%= link_to fw.name, flower_path(fw) %><br>
+<% end %>

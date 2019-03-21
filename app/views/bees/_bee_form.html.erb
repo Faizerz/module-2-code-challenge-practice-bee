@@ -1,0 +1,9 @@
+<%= form_for @bee do |f| %>
+  <%= f.label :name %>
+  <%= f.text_field :name %><br>
+  <%= f.label :queen %>
+  <%= f.check_box :queen %><br>
+  <%= f.label :hive %>
+  <%= collection_select(:bee, :hive_id, Hive.all, :id, :name) %><br>
+  <%= f.submit %>
+<% end %>
